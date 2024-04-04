@@ -18,3 +18,5 @@ kubectl create deployment --image=nginx deployment_object_name
 kubectl scale --replicat=2 deployment/deployment_object_name
 ### Update image
 kubectl set image deployment/deployment_object_name container_name=image_name
+### Forword port
+kubectl port-forward <pod_name> 8080:8080 --address 0.0.0.0 
